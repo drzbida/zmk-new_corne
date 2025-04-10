@@ -32,6 +32,13 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        NUMSYM: NUMSYM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMSYM";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 2>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -54,13 +61,31 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp T                    &kp UP               &kp Y      &kp U          &kp I      &kp O    &td0      &td0
-&td0       &kp A  &kp S  &kp D  &kp F      &kp G          &kp LEFT  &td0      &kp RIGHT  &kp H      &kp J          &kp K      &kp L    &kp P     &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp B  &td0              &kp DOWN             &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &td0
-                         &td0   &kp SPACE  &td0                                          &kp ENTER  &kp BACKSPACE  &td0
+&kp TAB    &kp Q  &kp W  &kp E    &kp R      &kp T                                 &mmv MOVE_UP                     &kp Y      &kp U          &kp I      &kp O    &td0      &td0
+&td0       &kp A  &kp S  &kp D    &kp F      &kp G                 &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &kp H      &kp J          &kp K      &kp L    &kp P     &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V      &kp B         &td0                    &mmv MOVE_DOWN                   &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &td0
+                         &NUMSYM  &kp SPACE  &kp LEFT_GUI                                                           &kp ENTER  &kp BACKSPACE  &td0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        layer_1 {
+            bindings = <
+&kp ESC  &trans  &kp N7  &kp N8  &kp N9  &kp N0                    &trans          &trans    &trans    &trans  &trans     &trans  &trans
+&trans   &trans  &kp N4  &kp N5  &kp N6  &trans            &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp N3  &trans
+&trans   &trans  &kp N1  &kp N2  &kp N3  &trans  &trans            &trans          &trans    &trans    &trans  &trans     &trans  &trans
+                         &trans  &trans  &trans                                    &trans    &trans    &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &trans  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RPAR)                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &trans        &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans         &trans         &trans                                          &trans  &trans  &trans
+            >;
         };
     };
 };
