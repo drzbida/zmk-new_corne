@@ -88,10 +88,10 @@
 
         raise_layer {
             bindings = <
-&kp ESC  &trans  &mt AMPERSAND N7          &mt ASTERISK N8       &mt LEFT_PARENTHESIS N9  &none                                       &trans          &trans    &trans    &trans  &trans     &trans  &trans
-&trans   &trans  &mt DOLLAR NUMBER_4       &mt PERCENT N5        &mt CARET NUMBER_6       &trans                              &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp N3  &trans
-&trans   &trans  &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3        &mt RIGHT_PARENTHESIS N0  &trans            &trans          &trans    &trans    &trans  &trans     &trans  &trans
-                                           &trans                &trans                   &trans                                                      &trans    &trans    &trans
+&kp ESC  &trans  &kp N7  &kp N8  &kp N9  &kp N0                       &trans          &trans    &trans    &trans  &trans     &trans  &trans
+&trans   &trans  &kp N4  &kp N5  &kp N6  &kp MINUS            &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp N3  &trans
+&trans   &trans  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans            &trans          &trans    &trans    &trans  &trans     &trans  &trans
+                         &trans  &trans  &trans                                       &trans    &trans    &trans
             >;
 
             label = "NUMBER";
