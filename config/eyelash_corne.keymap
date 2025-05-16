@@ -77,10 +77,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp T                             &mmv MOVE_UP                     &kp Y      &kp U          &kp I      &kp O    &none     &none
-&kp LSHFT  &kp A  &kp S  &kp D  &kp F      &kp G             &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &kp H      &kp J          &kp K      &kp L    &kp P     &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp B    &none                    &mmv MOVE_DOWN                   &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &none
-                         &mo 1  &kp SPACE  &WINALT                                                            &kp ENTER  &kp BACKSPACE  &mo 2
+&kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp T                              &mmv MOVE_UP                     &kp Y               &kp U          &kp I      &kp O    &none  &none
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F      &kp G              &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &kp H               &kp J          &kp K      &kp L    &kp P  &none
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp B     &none                    &mmv MOVE_DOWN                   &kp N               &kp M          &kp COMMA  &kp DOT  &none  &none
+                         &mo 1  &kp SPACE  &kp LGUI                                                            &mt LEFT_ALT ENTER  &kp BACKSPACE  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -88,9 +88,9 @@
 
         raise_layer {
             bindings = <
-&trans  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4  &mt F5 N5                            &msc SCRL_UP                     &mt F6 NUMBER_6  &mt F7 N7  &mt F8 N8  &mt F9 N9  &mt F10 N0   &trans
-&trans  &trans           &trans           &trans           &trans           &trans               &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT  &key_repeat  &trans
-&trans  &trans           &trans           &trans           &trans           &trans     &trans                    &msc SCRL_DOWN                   &trans           &trans     &trans     &trans     &trans       &trans
+&trans  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4  &mt F5 N5                            &msc SCRL_UP                     &mt F6 NUMBER_6  &mt F7 N7  &mt F8 N8  &mt F9 N9  &mt F10 N0  &trans
+&trans  &trans           &trans           &trans           &key_repeat      &trans               &msc SCRL_LEFT  &mkp MB2        &msc SCRL_RIGHT  &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT  &none       &trans
+&trans  &trans           &trans           &trans           &trans           &trans     &trans                    &msc SCRL_DOWN                   &trans           &trans     &trans     &trans     &trans      &trans
                                           &trans           &kp SPACE        &trans                                                                &kp RET          &kp BSPC   &trans
             >;
 
