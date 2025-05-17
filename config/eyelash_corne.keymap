@@ -80,6 +80,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <23 24>;
         };
+
+        combo_esc2 {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
+
+        combo_dword {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <43 46>;
+        };
     };
 
     keymap {
