@@ -47,7 +47,7 @@ layers:
   - $$mdi:keyboard-space$$
   - LGUI
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
   - symbol
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
